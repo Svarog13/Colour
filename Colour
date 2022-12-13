@@ -1,0 +1,29 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+
+void SetColor(int text, int bg) 
+{
+    HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hStdOut, (WORD)((bg << 4) | text));
+}
+
+int main() 
+{
+    SetColor(1, 0);
+    cout << "Every" << "\n";
+    SetColor(2, 0);
+    cout << "\tHunter" << "\n";
+    SetColor(3, 0);
+    cout << "\t\tWants" << "\n";
+    SetColor(4, 0);
+    cout << "\t\t\tTo know" << "\n";
+    SetColor(5, 0);
+    cout << "\t\t\t\t Where" << "\n";
+    SetColor(6, 0);
+    cout << "\t\t\t\t\tDoes Pheasant" << "\n";
+    SetColor(7, 0);
+    cout << "\t\t\t\t\t\t\tSit" << "\n\n";
+
+    return 0;
+}
